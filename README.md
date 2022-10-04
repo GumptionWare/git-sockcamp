@@ -70,16 +70,44 @@ Writing objects: 100% (4/4), 909 bytes | 909.00 KiB/s, done.
 Total 4 (delta 0), reused 0 (delta 0), pack-reused 0
 To https://github.com/GumptionWare/git-sockcamp.git
    bd356db..d14a90e  main -> main
+%
+% # OK, now let's "un-do" the bad push:
+% # SHA of KillSockcamp.md commit: bd356db3cec27ad7dd236b507724ccbda0134228
+% git revert bd356db3cec27ad7dd236b507724ccbda0134228
+[main d6f86e5] Revert "Add KillThis.md"
+ 1 file changed, 1 deletion(-)
+ delete mode 100644 KillThis.md
+% 
+% #After completing the prompt for the commit message:
+% git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
 
-
+nothing to commit, working tree clean
+%
+% git push
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 10 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 275 bytes | 275.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/GumptionWare/git-sockcamp.git
+   8fbe711..d6f86e5  main -> main
 
 ```
 
-Enumerating objects: 6, done.
-Counting objects: 100% (6/6), done.
-Delta compression using up to 10 threads
-Compressing objects: 100% (3/3), done.
-Writing objects: 100% (4/4), 909 bytes | 909.00 KiB/s, done.
-Total 4 (delta 0), reused 0 (delta 0), pack-reused 0
-To https://github.com/GumptionWare/git-sockcamp.git
-   bd356db..d14a90e  main -> main
+**Success!!**
+Looking in GitHub, I see the "KillThis.md" file is gone.
+
+Use git to determine what the local repo thinks it has:
+```
+% git ls-files
+About.md
+Outline.md
+README.md
+```
+Kewl, eh?
+
