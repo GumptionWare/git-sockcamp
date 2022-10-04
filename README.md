@@ -6,7 +6,7 @@ Experiments and lessons-learned with git.
 
 **Problem statement**: Ugh! My colleague just told me that a push I did a couple of weeks ago had junk in it that doesn't belong in our repo. I need to pull back that push without disturbing the rest of our repo.
 
-### The Plan
+### The Plan: Use `git revert`
 
 To simulate this scenario, I'll create three text files and push them to the remote repository.
 
@@ -71,6 +71,9 @@ Total 4 (delta 0), reused 0 (delta 0), pack-reused 0
 To https://github.com/GumptionWare/git-sockcamp.git
    bd356db..d14a90e  main -> main
 %
+```
+### Git Revert
+```
 % # OK, now let's "un-do" the bad push:
 % # SHA of KillSockcamp.md commit: bd356db3cec27ad7dd236b507724ccbda0134228
 % git revert bd356db3cec27ad7dd236b507724ccbda0134228
