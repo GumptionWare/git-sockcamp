@@ -8,9 +8,9 @@ Experiments and lessons-learned with git.
 
 ### The Plan: Use `git revert`
 
-To simulate this scenario, I'll create three text files and push them to the remote repository.
+To exercise this scenario, I'll create three text files and push them to the remote repository.
 
-After the third `git push`, I'll claw back that second push.
+After the third `git push`, I'll "un-do" that second push.
 
 ```
 % echo "# git-sockcamp" >> About.md
@@ -23,6 +23,9 @@ Untracked files:
 	About.md
 	KillThis.md
 	Outline.md
+  ```
+**KillThis.md** is our "bad" file; we'll want to back out that push.
+```  
 % git add About.md
 % git commit -m "About.md initial commit"
 [main 00817ee] About.md initial commit
