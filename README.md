@@ -103,14 +103,14 @@ To https://github.com/GumptionWare/git-sockcamp.git
 ```
 
 **Success!!**
-Looking in GitHub, I see the "KillThis.md" file is gone.
+Looking in GitHub, I see the "KillThis.md" file is gone. (Imagine a nice screenshot here.)
 
-Use git to determine what the local repo thinks it has:
+### Use `git ls-files` to confirm the local repo contents
 ```
 % git ls-files
 About.md
 Outline.md
 README.md
 ```
-Kewl, eh?
+Our "KillThis.md" file is gone. *Kewl, eh?*
 
